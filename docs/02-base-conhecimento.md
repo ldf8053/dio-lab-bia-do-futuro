@@ -77,6 +77,44 @@ TRANSAÇÕES DO CLIENTE:
 
 
 PRODUTOS DISPONÍVEIS PARA ENSINO:
+[
+  {
+    "nome": "Academia Fitness",
+    "categoria": "musculação",
+    "aporte_minimo": 99.00,
+    "indicado_para": "Sedentários"
+  },
+  {
+    "nome": "Studio movimento",
+    "categoria": "Pilates",
+    "aporte_minimo": 200.00,
+    "indicado_para": "Pessoas ativas há pelo menos 1 mês"
+  },
+  {
+    "nome": "Academia mais saúde",
+    "categoria": "dança",
+    "aporte_minimo": 60.00,
+    "indicado_para": "Iniciantes"
+  },
+  {
+    "nome": "Clínica Saúde Mental",
+    "categoria": "psicoterapia",
+    "aporte_minimo": 400.00,
+    "indicado_para": "Profissionais de saúde"
+  },
+  {
+    "nome": "Box Crossfit",
+    "categoria": "crossfit",
+    "aporte_minimo": 120.00,
+    "indicado_para": "atletas amadores"
+  },
+  {
+    "nome": "Assesoria esportiva",
+    "categoria": "corrida de rua",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Pessoas ativas há pelo menos 2 meses"
+  }
+]
 ```
 
 ---
