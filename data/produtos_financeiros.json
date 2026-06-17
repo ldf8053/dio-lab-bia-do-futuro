@@ -1,42 +1,38 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "nome": "Academia Fitness",
+    "categoria": "musculação",
+    "aporte_minimo": 99.00,
+    "indicado_para": "Sedentários"
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
+    "nome": "Studio movimento",
+    "categoria": "Pilates",
+    "aporte_minimo": 200.00,
+    "indicado_para": "Pessoas ativas há pelo menos 1 mês"
+  },
+  {
+    "nome": "Academia mais saúde",
+    "categoria": "dança",
+    "aporte_minimo": 60.00,
+    "indicado_para": "Iniciantes"
+  },
+  {
+    "nome": "Clínica Saúde Mental",
+    "categoria": "psicoterapia",
+    "aporte_minimo": 400.00,
+    "indicado_para": "Profissionais de saúde"
+  },
+  {
+    "nome": "Box Crossfit",
+    "categoria": "crossfit",
+    "aporte_minimo": 120.00,
+    "indicado_para": "atletas amadores"
+  },
+  {
+    "nome": "Assesoria esportiva",
+    "categoria": "corrida de rua",
     "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
-  },
-  {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
-  },
-  {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
-  },
-  {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "indicado_para": "Pessoas ativas há pelo menos 2 meses"
   }
 ]
