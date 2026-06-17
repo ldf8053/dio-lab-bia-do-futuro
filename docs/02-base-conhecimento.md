@@ -74,6 +74,7 @@ DADOS DO PERFIL DO USUÁRIO (data/perfil_investidor.json):
 }
 
 TRANSAÇÕES DO USUÁRIO (data/transacoes.csv):
+
 mês,data,descrição,categoria,valor,tipo
 Março,2026-03-01,Salário,receita,5000.00,entrada
 Março,2026-03-02,Aluguel,moradia,1200.00,saida
@@ -97,7 +98,6 @@ Abril,2026-04-12,Uber,transporte,45.00,saida
 Abril,2026-04-15,Conta de Luz,moradia,180.00,saida
 Abril,2026-04-20,Academia,saúde,99.00,saida
 Abril,2026-04-25,Combustível,transporte,250.00,saida
-
 
 
 mês,data,descricao,categoria,valor,tipo
@@ -162,11 +162,22 @@ PRODUTOS DISPONÍVEIS PARA ENSINO (data/produtos_financeiros.json):
 ```
 Dados do Cliente:
 - Nome: João Silva
-- Perfil: Moderado
+- Objetivo principal: investir em saúde física e mental
+- Meta de gastos: Diminuir gastos farmácia, aumentar gastos saúde física e mental
 - Saldo disponível: R$ 5.000
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+Gastos em saúde iniciais:
+- Gastos farmácia atual (março): 250.00
+- Gastos em saúde física ou mental (março 2026): 0.00
+- Gastos em saúde física em maio 2026: 99.00
+- Gastos em saúde mental em maio 2026: 0.00
+
+Produtos/Serviços em saúde a serem investidos:
+- Academia (musculação)
+- Academia (dança)
+- Studio (Pilates)
+- Clínica (Terapia)
+- Box (Crossfit)
+- Assessoria (Corrida)
+
 ```
