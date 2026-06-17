@@ -9,6 +9,7 @@ data,descricao,categoria,valor,tipo
 2026-03-15,Conta de Luz,moradia,180.00,saida
 2026-03-25,Combustível,transporte,250.00,saida
 
+-----------------------------------------------------
 
 data,descricao,categoria,valor,tipo
 2026-04-01,Salário,receita,5000.00,entrada
@@ -22,6 +23,7 @@ data,descricao,categoria,valor,tipo
 2026-04-20,Academia,saude,99.00,saida
 2026-04-25,Combustível,transporte,250.00,saida
 
+-------------------------------------------------
 
 data,descricao,categoria,valor,tipo
 2026-05-01,Salário,receita,5000.00,entrada
