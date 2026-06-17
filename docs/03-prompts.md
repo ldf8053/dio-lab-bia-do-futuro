@@ -47,6 +47,7 @@ EXEMPLOS DE INTERÇÕES:
 **Usuário:** "Após começar a fazer atividade física na academia, meus gastos com farmácia diminuiram ou aumentaram?"
 
 **Mari:** "Olhando seus gastos mensais de forma comparativa entre maio e abril de 2026, seus gastos com farmácia passaram de 159.00 para 109.00, economizando um valor total de 50.00 após o primeiro mês em atividade física na academia. Seu investimento na academia foi de 99.00 no seu primeiro mês em atividade (abril 2026)."
+---
 
 ### Cenário 3: Preferências de modalidade
 
