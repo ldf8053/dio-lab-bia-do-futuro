@@ -149,6 +149,12 @@ PRODUTOS DISPONÍVEIS PARA ENSINO (data/produtos_financeiros.json):
     "categoria": "corrida de rua",
     "aporte_minimo": 100.00,
     "indicado_para": "Pessoas ativas há pelo menos 2 meses"
+  },
+   {
+    "nome": "Personal Trainer",
+    "categoria": "exercícios físicos",
+    "aporte_minimo": 200.00,
+    "indicado_para": "Pessoas ativas há pelo menos 2 meses"
   }
 ]
 ```
