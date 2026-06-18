@@ -9,17 +9,15 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Para que serve a Mari? |
 |---------|---------|---------------------|
-| `perfil_investidor.json` | JSON | Personalizar explicações sobre as dúvidas e necessidades de aprendizado do usuário |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil do usuário, para que possam ser explicados ao usuário |
+| `perfil_usuario.json` | JSON | Personalizar explicações sobre as dúvidas e necessidades de aprendizado do usuário |
+| `produtos_saude.json` | JSON | Sugerir produtos adequados ao perfil do usuário, para que possam ser explicados ao usuário |
 | `transacoes.csv` | CSV | Analisar padrão de gastos de saúde (farmárcia e academia) do usuário e usar essas informações de forma didática |
 
 ---
 
 ## Adaptações nos Dados
 
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-Os produtos de saúde, o perfil do usuário e o as transações mensais foram alimentados: lista de academias, dados pessoais e transações de 3 meses foram adicionadas a esses 3 arquivos respectivamente.
+Os produtos/serviços de saúde, o perfil do usuário e o as transações mensais foram alimentados: lista de academias ou outros investimentos em saúde, dados pessoais e transações dos últimos 3 meses foram adicionadas a esses 3 arquivos respectivamente.
 
 ---
 
@@ -36,10 +34,10 @@ import json
 transações - pd.read_csv('data/transacoes.csv')
 
 #JSON
-with open('data/perfil_investidor.json', 'r', encoding='utf-8' as f:
+with open('data/perfil_usuario.json', 'r', encoding='utf-8' as f:
   perfil = json.load(f)
 
-with open('data/produtos_financeiros.json', 'r', encoding='utf-8' as f:
+with open('data/produtos_saude.json', 'r', encoding='utf-8' as f:
   produtos = json.load(f) 
 ```
 
@@ -47,13 +45,12 @@ with open('data/produtos_financeiros.json', 'r', encoding='utf-8' as f:
 Para simplificar, podemos injetar os dados no nosso prompt, garantindo que o agente tenha um melhor contexto possível, lembrando que em soluções mais robustas, o ideal é que essas informações segam carregadas dinamicamente para que possamos ganhar flexibilidade, e não precise mudar manualmente caso os dados mudem.
 
 ```text
-DADOS DO PERFIL DO USUÁRIO (data/perfil_investidor.json):
+DADOS DO PERFIL DO USUÁRIO (data/perfil_usuario.json):
 {
   "nome": "João Silva",
   "idade": 35,
   "profissao": "Cuidador de Idosos",
   "renda_mensal": 5000.00,
-  "perfil_investidor": "moderado",
   "objetivo_principal": "Investir em saúde física e mental reduzindo custos de farmácia",
   "custos_farmácia_atual": 250.00,
   "aceita_risco": false,
