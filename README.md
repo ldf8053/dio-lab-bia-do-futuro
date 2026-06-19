@@ -57,26 +57,28 @@ Ela:
 
 ---
 
-## 🏗️ Arquitetura
+## 🏗️ Arquitetura da Solução
 
-```text
-Usuário
-    │
-    ▼
-Interface Streamlit
-    │
-    ▼
-Mari (Prompt + Contexto)
-    │
-    ▼
-Google Gemini 2.5 Flash
-    ▲
-    │
-Base de Conhecimento Local
-│
-├── perfil_usuario.json
-├── transacoes.csv
-└── produtos_saude.json
+```mermaid
+flowchart TD
+
+A[👤 Usuário] --> B[💬 Interface Streamlit]
+B --> C[🧠 Mari - Agente de IA]
+
+subgraph Base de Conhecimento
+D[perfil_usuario.json]
+E[transacoes.csv]
+F[produtos_saude.json]
+end
+
+D --> C
+E --> C
+F --> C
+
+C --> G[📄 Montagem do Contexto]
+G --> H[⚡ Google Gemini 2.5 Flash]
+H --> I[💡 Resposta Personalizada]
+I --> B
 ```
 
 ---
