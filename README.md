@@ -57,28 +57,48 @@ Ela:
 
 ---
 
-## 🏗️ Arquitetura da Solução
+## 🏗️ Arquitetura do Agente Mari
 
 ```mermaid
 flowchart TD
 
-A[👤 Usuário] --> B[💬 Interface Streamlit]
-B --> C[🧠 Mari - Agente de IA]
+    User([👤 Usuário])
 
-subgraph Base de Conhecimento
-D[perfil_usuario.json]
-E[transacoes.csv]
-F[produtos_saude.json]
-end
+    subgraph Frontend
+        Streamlit["💬 Interface Streamlit"]
+    end
 
-D --> C
-E --> C
-F --> C
+    subgraph Agente["🧠 Agente Mari"]
+        App["app.py"]
+        Prompt["📋 System Prompt"]
+        Contexto["📄 Contexto Personalizado"]
+    end
 
-C --> G[📄 Montagem do Contexto]
-G --> H[⚡ Google Gemini 2.5 Flash]
-H --> I[💡 Resposta Personalizada]
-I --> B
+    subgraph Conhecimento["📚 Base de Conhecimento"]
+        Perfil["perfil_usuario.json"]
+        Transacoes["transacoes.csv"]
+        Produtos["produtos_saude.json"]
+    end
+
+    subgraph IA["⚡ Modelo Generativo"]
+        Gemini["Gemini 2.5 Flash"]
+    end
+
+    User -->|"Pergunta"| Streamlit
+    Streamlit --> App
+
+    Perfil --> Contexto
+    Transacoes --> Contexto
+    Produtos --> Contexto
+
+    Prompt --> App
+    Contexto --> App
+
+    App -->|"Prompt + Contexto"| Gemini
+    Gemini -->|"Resposta"| App
+
+    App --> Streamlit
+    Streamlit -->|"Resposta personalizada"| User
 ```
 
 ---
@@ -86,27 +106,29 @@ I --> B
 ## 📂 Estrutura do Projeto
 
 ```text
-projeto-mari/
+📦 Health-invest-AI-wallet-agent
 │
-├── README.md
+├── 📄 README.md                    # Documentação principal
+├── 📄 requirements.txt             # Dependências do projeto
 │
-├── data/
-│   ├── perfil_usuario.json
-│   ├── transacoes.csv
-│   └── produtos_saude.json
+├── 📁 data                         # Base de conhecimento da Mari
+│   ├── 📄 perfil_usuario.json      # Perfil e objetivos do usuário
+│   ├── 📄 produtos_saude.json      # Produtos e serviços disponíveis
+│   └── 📄 transacoes.csv           # Histórico financeiro
 │
-├── docs/
-│   ├── 01-documentacao-agente.md
-│   ├── 02-base-conhecimento.md
-│   ├── 03-prompts.md
-│   ├── 04-metricas.md
-│   └── 05-pitch.md
+├── 📁 docs                         # Documentação do agente
+│   ├── 📄 01-documentacao-agente.md
+│   ├── 📄 02-base-conhecimento.md
+│   ├── 📄 03-prompts.md
+│   ├── 📄 04-metricas.md
+│   └── 📄 05-pitch.md
 │
-├── src/
-│   ├── app.py
-│   └── .env
+├── 📁 images                       # Imagens utilizadas na documentação
 │
-└── assets/
+├── 📁 src
+│   └── 📄 app.py                   # Aplicação principal em Streamlit
+│
+└── 📄 .gitignore
 ```
 
 ---
