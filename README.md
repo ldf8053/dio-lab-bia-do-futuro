@@ -35,7 +35,7 @@ A Mari auxilia o usuário a:
 ## ✨ Funcionalidades
 
 - 💬 Chat interativo com Streamlit;
-- 🧠 Integração com Google Gemini 2.5 Flash;
+- 🧠 Integração com Google Gemini 2.5 Flash da Google AI Studio;
 - 📊 Leitura automática dos dados do usuário;
 - 📁 Base de conhecimento local em JSON e CSV;
 - 🎯 Respostas contextualizadas com base no perfil do usuário;
